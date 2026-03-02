@@ -33,12 +33,6 @@
   <link rel="alternate" hreflang="fr-MA" href="https://agro.remeta.com.br">
   <link rel="alternate" hreflang="zh-CN" href="https://agro.remeta.com.br">
   <link rel="alternate" hreflang="x-default" href="https://agro.remeta.com.br">
-  <meta name="geo.region" content="IN, CN, ZA, PK, VN, ID, BD, TR">
-  <link rel="alternate" hreflang="en" href="https://agro.remeta.com.br">
-  <link rel="alternate" hreflang="en-IN" href="https://agro.remeta.com.br">
-  <link rel="alternate" hreflang="en-ZA" href="https://agro.remeta.com.br">
-  <link rel="alternate" hreflang="zh-CN" href="https://agro.remeta.com.br">
-  <link rel="alternate" hreflang="x-default" href="https://agro.remeta.com.br">
 
   <!-- Open Graph (WhatsApp / LinkedIn preview) -->
   <meta property="og:type" content="website">
@@ -161,7 +155,6 @@ body{background:var(--deep);color:white;font-family:'DM Sans',sans-serif;overflo
 .wave:nth-child(1){width:800px;height:800px;background:var(--teal);top:-200px;left:-200px;animation-delay:0s;}
 .wave:nth-child(2){width:600px;height:600px;background:var(--teal);bottom:-150px;right:-100px;animation-delay:-8s;animation-duration:16s;}
 .wave:nth-child(3){width:400px;height:400px;background:var(--teal2);top:30%;left:40%;animation-delay:-13s;animation-duration:22s;}
-@keyframes waveFloat{0%,100%{transform:translate(0,0) scale(1);}40%{transform:translate(40px,-50px) scale(1.06);}70%{transform:translate(-30px,30px) scale(0.96);}}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;background:rgba(6,26,24,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);}
@@ -180,8 +173,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .burger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-6px);}
 .nav-mobile{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(6,26,24,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:1.5rem;flex-direction:column;gap:1rem;z-index:99;}
 .nav-mobile.active{display:flex;}
-.nav-mobile a,.nav-mobile .lang-switcher-mobile{width:100%;justify-content:center;}
+.nav-mobile a,.nav-mobile .lang-switcher-mobile{width:100%;justify-content:center;display:flex;}
 .nav-mobile .lang-switcher-mobile{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:0.4rem;flex-direction:row;}
+.nav-cta-mobile{display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal);color:var(--deep);font-weight:700;font-size:0.82rem;padding:0.55rem 1.3rem;border-radius:100px;text-decoration:none;transition:all 0.2s;width:100%;justify-content:center;}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 5vw 5rem;position:relative;}
@@ -296,7 +290,8 @@ footer a{color:var(--teal);text-decoration:none;font-size:0.68rem;opacity:0.7;}
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes waveFloat{0%,100%{transform:translate(0,0) scale(1);}40%{transform:translate(40px,-50px) scale(1.06);}70%{transform:translate(-30px,30px) scale(0.96);}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
 .hero-tag{animation:fadeUp 0.5s 0.05s ease both;}
 .protein-hero{animation:fadeUp 0.7s 0.1s ease both;}
 .hero-h1{animation:fadeUp 0.5s 0.2s ease both;}
@@ -308,7 +303,6 @@ footer a{color:var(--teal);text-decoration:none;font-size:0.68rem;opacity:0.7;}
   nav{padding:1rem 1.2rem;}
   .burger{display:flex;}
   .nav-cta,.lang-switcher{display:none!important;}
-  .lang-switcher-mobile{display:none;}
   .hero{padding:7rem 1.2rem 4rem;}
   .protein-num{font-size:clamp(6rem,22vw,10rem);}
   .protein-unit{font-size:0.9rem;right:-0.5rem;}
@@ -374,10 +368,10 @@ footer a{color:var(--teal);text-decoration:none;font-size:0.68rem;opacity:0.7;}
     <span></span>
   </button>
   <div class="nav-mobile">
-    <a href="https://wa.me/5548991443224?text=Hello%2C+I+am+a+fishmeal+or+agro+supplier+and+want+to+discuss." target="_blank" class="nav-cta-mobile" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal);color:var(--deep);font-weight:700;font-size:0.82rem;padding:0.55rem 1.3rem;border-radius:100px;text-decoration:none;transition:all 0.2s;width:100%;justify-content:center;">
+    <a href="https://wa.me/5548991443224?text=Hello%2C+I+am+a+fishmeal+or+agro+supplier+and+want+to+discuss." target="_blank" class="nav-cta-mobile">
       <span data-i18n="nav_cta">Send your offer →</span>
     </a>
-    <div class="lang-switcher-mobile" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:0.4rem;">
+    <div class="lang-switcher-mobile">
       <button class="lang-btn active" onclick="setLang('en');toggleMenu()">EN</button>
       <button class="lang-btn" onclick="setLang('zh');toggleMenu()">中文</button>
       <button class="lang-btn" onclick="setLang('fr');toggleMenu()">FR</button>
