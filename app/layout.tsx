@@ -69,22 +69,13 @@ export const viewport: Viewport = {
   initialScale: 1
 };
 
-function toHtmlLang(lang?: string): string {
-  if (lang === 'pt') return 'pt-BR';
-  if (lang === 'zh' || lang === 'fr' || lang === 'hi' || lang === 'en') return lang;
-  return 'en';
-}
-
-export default async function RootLayout({
-  children,
-  params
+export default function RootLayout({
+  children
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang?: string }>;
 }) {
-  const resolved = await params;
   return (
-    <html lang={toHtmlLang(resolved?.lang)}>
+    <html lang="en">
       <body className={`${dmSans.variable} ${dmMono.variable} ${playfair.variable}`}>{children}</body>
     </html>
   );
