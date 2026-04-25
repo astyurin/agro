@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npx wrangler deploy --config wrangler.toml --x-autoconfig=false",
     "start": "next start",
     "lint": "next lint"
   },
