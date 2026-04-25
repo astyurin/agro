@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     }
   },
   verification: {
-    google: 'google3218b7bcaab66167'
+    google: ['google3218b7bcaab66167', 'gaujHeXql8rMRmxFJG2u-dF0hFI1m3ZRNc_11Bxb26Y']
   },
   other: {
     'geo.region': 'IN, PK, MR, MA, ZA, CN',

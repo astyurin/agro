@@ -25,6 +25,7 @@ export const landingTemplateHtml = String.raw`
   <a href="https://wa.me/5548991443224?text=Hello%2C+I+am+a+fishmeal+or+agro+supplier+and+want+to+discuss." target="_blank" class="nav-cta">
     <span data-i18n="nav_cta">Send your offer →</span>
   </a>
+  <a href="/guides/export-fishmeal-china" class="nav-guide">Guides</a>
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('zh')">中文</button>
@@ -41,6 +42,7 @@ export const landingTemplateHtml = String.raw`
     <a href="https://wa.me/5548991443224?text=Hello%2C+I+am+a+fishmeal+or+agro+supplier+and+want+to+discuss." target="_blank" class="nav-cta-mobile">
       <span data-i18n="nav_cta">Send your offer →</span>
     </a>
+    <a href="/guides/export-fishmeal-china" class="nav-guide-mobile">Guides</a>
     <div class="lang-switcher-mobile">
       <button class="lang-btn active" onclick="setLang('en');toggleMenu()">EN</button>
       <button class="lang-btn" onclick="setLang('zh');toggleMenu()">中文</button>
@@ -281,6 +283,23 @@ export const landingTemplateHtml = String.raw`
   </div>
 </section>
 
+<!-- GUIDES -->
+<section class="guides-section">
+  <div class="spec-header mb-3">
+    <div class="sec-tag">Resources</div>
+    <h2 class="sec-h">Guides for <span>fishmeal exporters</span></h2>
+    <p class="sec-desc">Practical compliance notes for producers preparing China-facing fishmeal offers.</p>
+  </div>
+  <div class="guides-grid">
+    <a href="/guides/export-fishmeal-china" class="guide-item">
+      <span>How to export fishmeal to China: GACC + MARA compliance guide →</span>
+    </a>
+    <a href="/guides/gacc-mara-registration" class="guide-item">
+      <span>China registration explained: GACC vs MARA →</span>
+    </a>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="fct-tag"><span data-i18n="cta_tag">Ready to move?</span></div>
@@ -298,7 +317,11 @@ export const landingTemplateHtml = String.raw`
 
 <footer>
   <span data-i18n="footer_copy">© 2025 Remeta Agro · Florianópolis, Brasil</span>
-  <a href="https://scrap.remeta.com.br"><span data-i18n="footer_link">Remeta Scrap →</span></a>
+  <div class="footer-links">
+    <a href="/guides/export-fishmeal-china">Export guide</a>
+    <a href="/guides/gacc-mara-registration">Registration guide</a>
+    <a href="https://scrap.remeta.com.br"><span data-i18n="footer_link">Remeta Scrap →</span></a>
+  </div>
 </footer>
 
 `;
@@ -362,7 +385,7 @@ export const translations = {
     contact_whatsapp:"WhatsApp",
     contact_tg:"Telegram @manshin_rv",
     contact_wc:"WeChat: Manshin_rv",
-    footer_copy:"© 2025 Remeta Agro · Florianópolis, Brasil",
+    footer_copy:"© 2026 Remeta Agro · Florianópolis, Brasil",
     footer_link:"Remeta Scrap →"
   },
   zh: {
@@ -423,7 +446,7 @@ export const translations = {
     contact_whatsapp:"WhatsApp",
     contact_tg:"Telegram @manshin_rv",
     contact_wc:"微信: Manshin_rv",
-    footer_copy:"© 2025 Remeta Agro · 巴西弗洛里亚诺波利斯",
+    footer_copy:"© 2026 Remeta Agro · 巴西弗洛里亚诺波利斯",
     footer_link:"Remeta Scrap →"
   },
   fr: {
@@ -484,7 +507,7 @@ export const translations = {
     contact_whatsapp:"WhatsApp",
     contact_tg:"Telegram @manshin_rv",
     contact_wc:"WeChat : Manshin_rv",
-    footer_copy:"© 2025 Remeta Agro · Florianópolis, Brésil",
+    footer_copy:"© 2026 Remeta Agro · Florianópolis, Brésil",
     footer_link:"Remeta Scrap →"
   },
   pt: {
@@ -545,7 +568,7 @@ export const translations = {
     contact_whatsapp:"WhatsApp",
     contact_tg:"Telegram @manshin_rv",
     contact_wc:"WeChat: Manshin_rv",
-    footer_copy:"© 2025 Remeta Agro · Florianópolis, Brasil",
+    footer_copy:"© 2026 Remeta Agro · Florianópolis, Brasil",
     footer_link:"Remeta Scrap →"
   },
   hi: {
@@ -606,7 +629,7 @@ export const translations = {
     contact_whatsapp:"WhatsApp",
     contact_tg:"Telegram @manshin_rv",
     contact_wc:"WeChat: Manshin_rv",
-    footer_copy:"© 2025 Remeta Agro · फ्लोरिआनोपोलिस, ब्राज़ील",
+    footer_copy:"© 2026 Remeta Agro · फ्लोरिआनोपोलिस, ब्राज़ील",
     footer_link:"Remeta Scrap →"
   }
 } as const;

@@ -49,15 +49,22 @@ export const COUNTRY_PAGES = [
 ] as const;
 
 export const STATIC_ROUTES = [
+  '/',
   '/en',
   '/zh',
   '/fr',
   '/pt',
   '/hi',
+  '/guides/export-fishmeal-china',
+  '/guides/gacc-mara-registration',
   '/fishmeal-buyers',
   '/fishmeal-buyers/india',
+  '/fishmeal-buyers/india/guide',
   '/fishmeal-buyers/pakistan',
+  '/fishmeal-buyers/pakistan/guide',
   '/fishmeal-buyers/morocco',
   '/fishmeal-buyers/mauritania',
-  '/fishmeal-buyers/south-africa'
+  '/fishmeal-buyers/south-africa',
+  '/Remeta_Fishmeal_Export_Checklist_2026.pdf',
+  '/Remeta_Fishmeal_Specification.pdf'
 ] as const;

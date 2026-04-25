@@ -97,6 +97,14 @@ export default async function LangPage({ params }: { params: Promise<Params> }) 
             <a href='/fishmeal-buyers/south-africa'>Fishmeal buyer South Africa</a>
           </nav>
         </div>
+        <div className='seo-section'>
+          <h2>Guides for fishmeal exporters</h2>
+          <p>Use these compliance guides to prepare export documentation, registration checks, and buyer conversations.</p>
+          <nav className='seo-links' aria-label='Fishmeal exporter guides'>
+            <a href='/guides/export-fishmeal-china'>How to export fishmeal to China: GACC + MARA compliance guide</a>
+            <a href='/guides/gacc-mara-registration'>China registration explained: GACC vs MARA</a>
+          </nav>
+        </div>
       </section>
       <Script id='landing-interactions' strategy='afterInteractive'>
         {interactionsScript}

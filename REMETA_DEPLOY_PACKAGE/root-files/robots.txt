@@ -1,0 +1,5 @@
+# robots.txt for agro.remeta.com.br
+User-agent: *
+Allow: /
+
+Sitemap: https://agro.remeta.com.br/sitemap.xml

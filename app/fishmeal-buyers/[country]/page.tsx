@@ -106,6 +106,18 @@ export default async function CountryFishmealPage({ params }: { params: Promise<
       }
     ]
   };
+  const guideLink =
+    entry.slug === 'india'
+      ? {
+          href: '/fishmeal-buyers/india/guide',
+          label: 'Read our India export compliance guide'
+        }
+      : entry.slug === 'pakistan'
+        ? {
+            href: '/fishmeal-buyers/pakistan/guide',
+            label: 'Read our Pakistan export compliance guide'
+          }
+        : null;
 
   return (
     <main className='seo-page'>
@@ -134,6 +146,11 @@ export default async function CountryFishmealPage({ params }: { params: Promise<
           <li>Trial program: 1-3 containers before full monthly scaling</li>
           <li>Documentation: COA, packing details, origin and loading terms</li>
         </ul>
+        {guideLink ? (
+          <div className='seo-links'>
+            <Link href={guideLink.href}>{guideLink.label}</Link>
+          </div>
+        ) : null}
       </section>
 
       <section className='seo-section'>

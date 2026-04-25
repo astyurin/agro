@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return STATIC_ROUTES.map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: LAST_MODIFIED,
-    changeFrequency: route === '/en' ? 'weekly' : 'monthly',
-    priority: route === '/en' ? 1 : 0.8
+    changeFrequency: route === '/' || route === '/en' ? 'weekly' : route.endsWith('.pdf') ? 'yearly' : 'monthly',
+    priority: route === '/' || route === '/en' ? 1 : route.endsWith('.pdf') ? 0.5 : 0.8
   }));
 }

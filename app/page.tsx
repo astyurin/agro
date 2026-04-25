@@ -7,10 +7,18 @@ export const metadata: Metadata = {
   title: 'Buy Fishmeal 62-68% Protein - Remeta Agro | Commodity Trading Brazil',
   description: 'Fishmeal 62-68% protein. Confirmed buyers in Asia. Send your offer today. 48h response. Remeta Agro, Brazil.',
   alternates: {
-    canonical: '/en'
+    canonical: '/',
+    languages: {
+      en: '/en',
+      zh: '/zh',
+      fr: '/fr',
+      pt: '/pt',
+      hi: '/hi',
+      'x-default': '/en'
+    }
   },
   robots: {
-    index: false,
+    index: true,
     follow: true
   }
 };
@@ -36,6 +44,14 @@ export default function HomePage() {
             <a href='/fishmeal-buyers/morocco'>Fishmeal buyer Morocco</a>
             <a href='/fishmeal-buyers/mauritania'>Fishmeal buyer Mauritania</a>
             <a href='/fishmeal-buyers/south-africa'>Fishmeal buyer South Africa</a>
+          </nav>
+        </div>
+        <div className='seo-section'>
+          <h2>Guides for fishmeal exporters</h2>
+          <p>Use these compliance guides to prepare export documentation, registration checks, and buyer conversations.</p>
+          <nav className='seo-links' aria-label='Fishmeal exporter guides'>
+            <a href='/guides/export-fishmeal-china'>How to export fishmeal to China: GACC + MARA compliance guide</a>
+            <a href='/guides/gacc-mara-registration'>China registration explained: GACC vs MARA</a>
           </nav>
         </div>
       </section>
