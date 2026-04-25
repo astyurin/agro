@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { breadcrumbJsonLd, faqJsonLd, organizationJsonLd, productJsonLd, serviceJsonLd } from '../lib/seo-jsonld';
 import { SUPPORTED_LANGS, type SupportedLang } from '../lib/landing-data';
 import { interactionsScript, renderLandingHtml, toHtmlLang } from '../lib/landing-render';
-import { SITE_URL } from '../lib/seo';
+import { DOCUMENT_LINKS, GUIDE_LINKS, SITE_URL } from '../lib/seo';
 
 type Params = { lang: string };
 
@@ -101,8 +101,22 @@ export default async function LangPage({ params }: { params: Promise<Params> }) 
           <h2>Guides for fishmeal exporters</h2>
           <p>Use these compliance guides to prepare export documentation, registration checks, and buyer conversations.</p>
           <nav className='seo-links' aria-label='Fishmeal exporter guides'>
-            <a href='/guides/export-fishmeal-china'>How to export fishmeal to China: GACC + MARA compliance guide</a>
-            <a href='/guides/gacc-mara-registration'>China registration explained: GACC vs MARA</a>
+            {GUIDE_LINKS.map((entry) => (
+              <a href={entry.href} key={entry.href}>
+                {entry.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <div className='seo-section'>
+          <h2>Downloadable fishmeal documents</h2>
+          <p>Official PDF resources for product qualification, export readiness, and supplier review.</p>
+          <nav className='seo-links' aria-label='Fishmeal PDF documents'>
+            {DOCUMENT_LINKS.map((entry) => (
+              <a href={entry.href} key={entry.href}>
+                {entry.label}
+              </a>
+            ))}
           </nav>
         </div>
       </section>

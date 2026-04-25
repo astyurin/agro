@@ -48,6 +48,36 @@ export const COUNTRY_PAGES = [
   }
 ] as const;
 
+export const GUIDE_LINKS = [
+  {
+    href: '/guides/export-fishmeal-china',
+    label: 'How to export fishmeal to China: GACC + MARA compliance guide'
+  },
+  {
+    href: '/guides/gacc-mara-registration',
+    label: 'China registration explained: GACC vs MARA'
+  },
+  {
+    href: '/fishmeal-buyers/india/guide',
+    label: 'India fishmeal to China: EIC protocol, GACC & MARA compliance'
+  },
+  {
+    href: '/fishmeal-buyers/pakistan/guide',
+    label: 'Pakistan fishmeal to China: tariff edge, registration & export hubs'
+  }
+] as const;
+
+export const DOCUMENT_LINKS = [
+  {
+    href: '/Remeta_Fishmeal_Specification.pdf',
+    label: 'Remeta Fishmeal Specification PDF'
+  },
+  {
+    href: '/Remeta_Fishmeal_Export_Checklist_2026.pdf',
+    label: 'Remeta Fishmeal Export Checklist 2026 PDF'
+  }
+] as const;
+
 export const STATIC_ROUTES = [
   '/',
   '/en',
@@ -55,16 +85,8 @@ export const STATIC_ROUTES = [
   '/fr',
   '/pt',
   '/hi',
-  '/guides/export-fishmeal-china',
-  '/guides/gacc-mara-registration',
   '/fishmeal-buyers',
-  '/fishmeal-buyers/india',
-  '/fishmeal-buyers/india/guide',
-  '/fishmeal-buyers/pakistan',
-  '/fishmeal-buyers/pakistan/guide',
-  '/fishmeal-buyers/morocco',
-  '/fishmeal-buyers/mauritania',
-  '/fishmeal-buyers/south-africa',
-  '/Remeta_Fishmeal_Export_Checklist_2026.pdf',
-  '/Remeta_Fishmeal_Specification.pdf'
+  ...GUIDE_LINKS.map((entry) => entry.href),
+  ...COUNTRY_PAGES.map((entry) => `/fishmeal-buyers/${entry.slug}`),
+  ...DOCUMENT_LINKS.map((entry) => entry.href)
 ] as const;

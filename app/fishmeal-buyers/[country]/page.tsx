@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { COUNTRY_PAGES, SITE_URL } from '../../lib/seo';
+import { COUNTRY_PAGES, DOCUMENT_LINKS, GUIDE_LINKS, SITE_URL } from '../../lib/seo';
 
 type Params = { country: string };
 
@@ -164,6 +164,26 @@ export default async function CountryFishmealPage({ params }: { params: Promise<
           </a>
           <a href='mailto:manshin@remeta.com.br?subject=Fishmeal%20Offer'>Contact by email</a>
         </div>
+      </section>
+
+      <section className='seo-section'>
+        <h2>Guides and documents</h2>
+        <p>
+          Review the full guide library and PDF documents before sending your COA, origin, monthly volume, and FOB
+          indication.
+        </p>
+        <nav className='seo-links' aria-label='Fishmeal guides and documents'>
+          {GUIDE_LINKS.map((item) => (
+            <Link href={item.href} key={item.href}>
+              {item.label}
+            </Link>
+          ))}
+          {DOCUMENT_LINKS.map((item) => (
+            <a href={item.href} key={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
       </section>
 
       <nav className='seo-links' aria-label='Internal links'>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { COUNTRY_PAGES, SITE_URL } from '../lib/seo';
+import { COUNTRY_PAGES, DOCUMENT_LINKS, GUIDE_LINKS, SITE_URL } from '../lib/seo';
 
 export const metadata: Metadata = {
   title: 'Fishmeal Buyers by Country | Remeta Agro',
@@ -67,6 +67,26 @@ export default function FishmealBuyersIndexPage() {
           <li>Histamine: up to 500 mg/kg</li>
           <li>Independent inspection support: SGS / Bureau Veritas preferred</li>
         </ul>
+      </section>
+
+      <section className='seo-section'>
+        <h2>Guides and documents</h2>
+        <p>
+          Use the full guide library and PDF documents to prepare registration checks, COA review, and supplier
+          qualification before contacting Remeta.
+        </p>
+        <nav className='seo-links' aria-label='Fishmeal guides and documents'>
+          {GUIDE_LINKS.map((entry) => (
+            <Link href={entry.href} key={entry.href}>
+              {entry.label}
+            </Link>
+          ))}
+          {DOCUMENT_LINKS.map((entry) => (
+            <a href={entry.href} key={entry.href}>
+              {entry.label}
+            </a>
+          ))}
+        </nav>
       </section>
 
       <nav className='seo-links' aria-label='Internal links'>

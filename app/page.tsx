@@ -2,6 +2,7 @@ import Script from 'next/script';
 import type { Metadata } from 'next';
 import { breadcrumbJsonLd, faqJsonLd, organizationJsonLd, productJsonLd, serviceJsonLd } from './lib/seo-jsonld';
 import { interactionsScript, renderLandingHtml } from './lib/landing-render';
+import { DOCUMENT_LINKS, GUIDE_LINKS } from './lib/seo';
 
 export const metadata: Metadata = {
   title: 'Buy Fishmeal 62-68% Protein - Remeta Agro | Commodity Trading Brazil',
@@ -50,8 +51,22 @@ export default function HomePage() {
           <h2>Guides for fishmeal exporters</h2>
           <p>Use these compliance guides to prepare export documentation, registration checks, and buyer conversations.</p>
           <nav className='seo-links' aria-label='Fishmeal exporter guides'>
-            <a href='/guides/export-fishmeal-china'>How to export fishmeal to China: GACC + MARA compliance guide</a>
-            <a href='/guides/gacc-mara-registration'>China registration explained: GACC vs MARA</a>
+            {GUIDE_LINKS.map((entry) => (
+              <a href={entry.href} key={entry.href}>
+                {entry.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <div className='seo-section'>
+          <h2>Downloadable fishmeal documents</h2>
+          <p>Official PDF resources for product qualification, export readiness, and supplier review.</p>
+          <nav className='seo-links' aria-label='Fishmeal PDF documents'>
+            {DOCUMENT_LINKS.map((entry) => (
+              <a href={entry.href} key={entry.href}>
+                {entry.label}
+              </a>
+            ))}
           </nav>
         </div>
       </section>

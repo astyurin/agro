@@ -297,6 +297,18 @@ export const landingTemplateHtml = String.raw`
     <a href="/guides/gacc-mara-registration" class="guide-item">
       <span>China registration explained: GACC vs MARA →</span>
     </a>
+    <a href="/fishmeal-buyers/india/guide" class="guide-item">
+      <span>India fishmeal to China: EIC protocol, GACC & MARA compliance →</span>
+    </a>
+    <a href="/fishmeal-buyers/pakistan/guide" class="guide-item">
+      <span>Pakistan fishmeal to China: tariff edge, registration & export hubs →</span>
+    </a>
+    <a href="/Remeta_Fishmeal_Specification.pdf" class="guide-item">
+      <span>Download fishmeal specification PDF →</span>
+    </a>
+    <a href="/Remeta_Fishmeal_Export_Checklist_2026.pdf" class="guide-item">
+      <span>Download fishmeal export checklist PDF →</span>
+    </a>
   </div>
 </section>
 
@@ -320,6 +332,10 @@ export const landingTemplateHtml = String.raw`
   <div class="footer-links">
     <a href="/guides/export-fishmeal-china">Export guide</a>
     <a href="/guides/gacc-mara-registration">Registration guide</a>
+    <a href="/fishmeal-buyers/india/guide">India guide</a>
+    <a href="/fishmeal-buyers/pakistan/guide">Pakistan guide</a>
+    <a href="/Remeta_Fishmeal_Specification.pdf">Specification PDF</a>
+    <a href="/Remeta_Fishmeal_Export_Checklist_2026.pdf">Checklist PDF</a>
     <a href="https://scrap.remeta.com.br"><span data-i18n="footer_link">Remeta Scrap →</span></a>
   </div>
 </footer>
